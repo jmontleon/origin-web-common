@@ -1210,7 +1210,7 @@ angular.module("openshiftCommonServices")
     };
 
     var getBindingsForResource = function(bindings, apiObject) {
-      if (_.get(apiObject, 'kind') === 'Instance') {
+      if (_.get(apiObject, 'kind') === 'ServiceInstance') {
         return _.filter(bindings, ['spec.instanceRef.name', _.get(apiObject, 'metadata.name')]);
       }
 
