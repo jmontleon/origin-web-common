@@ -2955,7 +2955,7 @@ angular.module("openshiftCommonServices")
 
     var bindingResource = {
       group: 'servicecatalog.k8s.io',
-      resource: 'bindings'
+      resource: 'serviceinstancecredentials'
     };
 
     var getServiceClassForInstance = function(serviceInstance, serviceClasses) {
@@ -3012,7 +3012,7 @@ angular.module("openshiftCommonServices")
       var instanceName = serviceInstance.metadata.name;
 
       var binding = {
-        kind: 'Binding',
+        kind: 'ServiceInstanceCredential',
         apiVersion: 'servicecatalog.k8s.io/v1alpha1',
         metadata: {
           generateName: instanceName + '-'
